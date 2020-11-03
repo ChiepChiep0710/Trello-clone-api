@@ -6,9 +6,9 @@ const config = {
 	sequelize: database,
 };
 export class labelTask extends Model {
-  id!: number;
-  task_id: number;
-  label_id: number;
+	id!: number;
+	task_id: number;
+	label_id: number;
 	public readonly createdAt!: Date;
 	public readonly updatedAt!: Date;
 }
@@ -19,11 +19,11 @@ labelTask.init(
 			type: DataTypes.INTEGER,
 			autoIncrement: true,
 		},
-    task_id:DataTypes.INTEGER,
-    label_id: DataTypes.INTEGER,
-  },
+		task_id: DataTypes.INTEGER,
+		label_id: DataTypes.INTEGER,
+	},
 	config
-)
+);
 
 labelTask.sync({ force: true }).then(() => console.log('labelTask table created'));
-export default labelTask
+export default labelTask;
