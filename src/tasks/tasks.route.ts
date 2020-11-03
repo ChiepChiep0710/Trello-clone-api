@@ -1,8 +1,10 @@
 import express from 'express';
 import taskController from './tasks.controller';
 import multer from 'multer';
+import dotenv from 'dotenv';
+dotenv.config();
 const upload = multer({
-	dest: '/home/hieu/Desktop/Trello-clone-api/public/uploads',
+	dest: process.env.PUBLICLINK ,
 });
 const router = express.Router();
 router.post('/addTasks', taskController.addTasks);

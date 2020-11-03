@@ -14,14 +14,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const tasks_service_1 = __importDefault(require("./tasks.service"));
 const addTasks = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { task: task, status: status, error: error, } = yield tasks_service_1.default.addTasks(req.body);
+    const { task: task, status: status, error: error } = yield tasks_service_1.default.addTasks(req.body);
     if (task)
         res.status(status).send({ task });
     if (error)
         res.status(status).send({ error });
 });
 const addLabelsToTask = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { task: task, status: status, error: error, } = yield tasks_service_1.default.addLabelsToTask(req.body);
+    const { task: task, status: status, error: error } = yield tasks_service_1.default.addLabelsToTask(req.body);
     if (task)
         res.status(status).send({ task });
     if (error)

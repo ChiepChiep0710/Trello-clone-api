@@ -51,25 +51,25 @@ Task.sync({
 Task.belongsToMany(labels_model_1.default, {
   through: labelTask_model_1.default,
   as: 'label',
-  foreignKey: "task_id",
+  foreignKey: 'task_id',
   onDelete: 'CASCADE',
   onUpdate: 'CASCADE'
 });
 labels_model_1.default.belongsToMany(Task, {
   through: labelTask_model_1.default,
   as: 'task',
-  foreignKey: "label_id",
+  foreignKey: 'label_id',
   onDelete: 'CASCADE',
   onUpdate: 'CASCADE'
 });
 Task.belongsToMany(users_model_1.default, {
-  through: "userTask",
+  through: 'userTask',
   as: 'user',
-  foreignKey: "task_id"
+  foreignKey: 'task_id'
 });
 users_model_1.default.belongsToMany(Task, {
   through: 'userTask',
   as: 'task',
-  foreignKey: "user_id"
+  foreignKey: 'user_id'
 });
 exports.default = Task;

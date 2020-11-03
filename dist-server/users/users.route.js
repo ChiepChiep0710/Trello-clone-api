@@ -17,7 +17,7 @@ const users_controller_1 = __importDefault(require("./users.controller"));
 const multer_1 = __importDefault(require("multer"));
 
 const upload = multer_1.default({
-  dest: '/home/hieu/Desktop/Trello-clone-api/public/uploads'
+  dest: process.env.PUBLICLINK
 });
 const router = express_1.default.Router();
 router.post('/addUsers', users_controller_1.default.addUsers);

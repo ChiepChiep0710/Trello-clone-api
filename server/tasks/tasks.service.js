@@ -40,5 +40,5 @@ const addLabelsToTask = (body) => __awaiter(void 0, void 0, void 0, function* ()
 });
 exports.default = {
     addTasks,
-    addLabelsToTask
+    addLabelsToTask,
 };

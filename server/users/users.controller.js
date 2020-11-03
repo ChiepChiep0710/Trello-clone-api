@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const users_service_1 = __importDefault(require("./users.service"));
 const addUsers = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { user: user, status: status, error: error, } = yield users_service_1.default.addUsers(req.body);
+    const { user: user, status: status, error: error } = yield users_service_1.default.addUsers(req.body);
     if (user)
         res.status(status).send({ user });
     if (error)

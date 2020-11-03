@@ -16,8 +16,11 @@ const tasks_controller_1 = __importDefault(require("./tasks.controller"));
 
 const multer_1 = __importDefault(require("multer"));
 
+const dotenv_1 = __importDefault(require("dotenv"));
+
+dotenv_1.default.config();
 const upload = multer_1.default({
-  dest: '/home/hieu/Desktop/Trello-clone-api/public/uploads'
+  dest: process.env.PUBLICLINK
 });
 const router = express_1.default.Router();
 router.post('/addTasks', tasks_controller_1.default.addTasks);
